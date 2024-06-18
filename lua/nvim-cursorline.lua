@@ -43,7 +43,7 @@ local function matchadd()
   then
     return
   end
-  local pattern = [[\<]] .. vim.fn.escape(cursorword, "~") .. [[\>]]
+  local pattern = [[\<]] .. vim.fn.escape(cursorword, "~[]") .. [[\>]]
   w.cursorword_id = fn.matchadd("CursorWord", pattern, -1)
 end
 
